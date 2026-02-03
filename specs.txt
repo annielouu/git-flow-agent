@@ -1,0 +1,16 @@
+Core capabilities:
+Read a git repo - clone/pull, read files, understand structure
+Make changes - edit/create files based on instructions
+Submit a PR - commit, push, create pull request via GitHub API or gh CLI
+Tools your agent would use:
+subprocess or os to run git commands (git clone, git checkout, git commit, etc.)
+gh CLI or GitHub API (via PyGithub library) to create PRs
+File read/write operations
+
+Basic flow:
+
+User instruction → Agent reads repo → Agent makes changes → Agent commits & pushes → Agent creates PR
+
+Approach options:
+Use gh CLI (simpler) - GitHub's official CLI handles auth and PR creation easily
+Use GitHub API (more control) - via PyGithub or raw REST calls
